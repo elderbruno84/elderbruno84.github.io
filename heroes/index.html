@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Heróis da Marvel</title>
+</head>
+<body>
+    <div class="container">
+        <div id="heroes" class="heroes-marvel"></div>
+    </div>    
+</body>
+<script>
+    const timeStamp = '1655571024';
+    const apiKey = '25cd7893c9cacf108c03f9f7678c423b';
+    const md5 = '5562243b161c43fac0061d03544911a9';
+
+    fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=100`
+    ).then((response) => {return response.json();}
+    ).then((jsonParsed) => {
+        const divHero = document.querySelector('#heroes');
+
+        jsonParsed.data.results.forEach(element => {
+            const srcImage = element.thumbnail.path + '.' + element.thumbnail.extension
+            const nameHero = element.name
+            const descriptionHero = element.description
+
+            createDivHero(srcImage, nameHero, descriptionHero, divHero);
+
+            console.log(jsonParsed)      
+        });
+
+        function createDivHero(srcImage, nameHero, descriptionHero, divToAppend) {
+            const divPai = document.createElement('div');
+            const divFilho = document.createElement('div');
+            const textName = document.createElement('text');
+            const img = document.createElement('img');
+            const textDescription = document.createElement('text');
+
+            divPai.setAttribute("class", "div-pai");
+            divFilho.setAttribute("class", "div-filho");
+            textName.setAttribute("class", "name");
+            img.setAttribute("class", "img-hero");
+            textDescription.setAttribute("class", "description");
+            
+            textName.textContent = nameHero
+            img.src = srcImage
+            textDescription.textContent = descriptionHero
+
+            divFilho.appendChild(img)            
+            divFilho.appendChild(textName)
+            // divFilho.appendChild(textDescription)            
+            divPai.appendChild(divFilho)
+            divPai.appendChild(textDescription)
+            divToAppend.appendChild(divPai)
+
+            divPai.classList.add("personagem");
+        }
+    })
+</script>
+</html>

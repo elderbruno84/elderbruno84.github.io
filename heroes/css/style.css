@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;  
+    font-family: 'Poppins', sans-serif;  
+    background-image: linear-gradient(rgba(88, 0, 0, 0.9), rgba(20, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(/images/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;    
+}
+
+.container {
+    width: auto;  
+}
+
+.heroes-marvel {
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    text-align: center;    
+}
+
+.heroes-marvel .div-pai {
+    width: 400px;
+    border: 2px solid rgb(82, 5, 5);
+    border-radius: 50px;
+    margin: 20px;
+    padding: 20px;
+    filter: grayscale();
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    
+}
+
+.heroes-marvel .div-pai:hover {
+    background-color: rgba(0, 0, 0, 0.8);    
+    filter: none;
+}
+
+.heroes-marvel .div-filho {
+    display: flex;
+    align-items: center;   
+}
+
+/***************
+*  PERSONAGEM
+***************/
+.personagem img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 0 30px #ec290f;
+    margin: 20px 0;   
+}
+
+
+
+.personagem .name {
+    margin-left: 20px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.personagem .description {
+    font-weight: 100;
+    color: white;    
+    width: 400px;
+    height: 100px;    
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+
