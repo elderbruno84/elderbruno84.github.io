@@ -1,0 +1,142 @@
+
+:root {
+    --bg: rgb(8, 8, 8);
+    --font: "Archivo", sans-serif;
+    --font-display: "Archivo Narrow", sans-serif;
+    --hotpink: #00aeff;
+    --orange: #970477;
+    --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+  }
+ 
+  
+
+body {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: var(--font);
+  }
+  
+  main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .table {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    max-width: 50rem;
+    margin: auto;
+  }
+
+.img {
+    width: 8rem;
+    height: 9rem;    
+    border-radius: 0.2em;
+}
+
+
+  
+  .card {
+    width: 9rem;
+    height: 10rem;
+    margin: 0.8rem;
+    border-radius: 0.5em;
+    background-image: var(--gradient);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .card-contents {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    background-color: rgb(2, 30, 189);
+    box-shadow: 4px 4px 15px rgba(123, 125, 255, 0.993), 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    padding-top: 0.4rem;
+  }
+  
+  
+  .card-contents::selection {
+    background: transparent;
+  }
+  
+  .card.uncovered {
+    transform: rotateY(-180deg);
+  }
+
+  .hited {
+    opacity: 0;
+  }
+
+
+  @keyframes error {
+    10%,
+    90% {
+      transform: rotateY(-180deg) translateX(-1px);
+    }
+    20%,
+    80% {
+      transform: rotateY(-180deg) translateX(2px);
+    }
+    30%,
+    50%,
+    70% {
+      transform: rotateY(-180deg) translateX(-4px);
+    }
+    40%,
+    60% {
+      transform: rotateY(-180deg) translateX(4px);
+    }
+  }
+  
+  @keyframes hit {
+    from {
+      transform: rotateY(-180deg) scale3d(1, 1, 1);
+      opacity: 1;
+    }
+  
+    25% {
+      transform: rotateY(-180deg) scale3d(1.1, 1.1, 1.1);
+      opacity: 1;
+    }
+  
+    to {
+      transform: rotateY(-180deg) scale3d(1, 1, 1);
+      opacity: 0;
+    }
+  }
+  
+  .hited {
+    pointer-events: none;
+  }
+  
+  .hited .tarjeta__contenido {
+    animation: acierto 1.3s ease-in-out forwards;
+  }
+  
+  .error {
+    animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+  
