@@ -10,11 +10,11 @@ var cronometro;
 //];
 
 var grupoTarjetas = [
-["/images/sc(1).webp", "/images/sc(2).webp"],
-["/images/sc(3).webp", "/images/sc(4).webp"],
-["/images/sc(5).webp", "/images/sc(6).webp", "/images/sc(7).webp", "/images/sc(8).webp"],
-["/images/sc(9).webp", "/images/sc(10).webp", "/images/sc(11).webp", "/images/sc(12).webp"],
-["/images/sc(13).webp", "/images/sc(14).webp", "/images/sc(15).webp", "/images/sc(16).webp"]
+["https://elderbruno84.github.io/gamesc/images/sc(1).webp", "https://elderbruno84.github.io/gamesc/images/sc(2).webp"],
+["https://elderbruno84.github.io/gamesc/images/sc(3).webp", "https://elderbruno84.github.io/gamesc/images/sc(4).webp"],
+["https://elderbruno84.github.io/gamesc/images/sc(5).webp", "https://elderbruno84.github.io/gamesc/images/sc(6).webp", "https://elderbruno84.github.io/gamesc/images/sc(7).webp", "https://elderbruno84.github.io/gamesc/images/sc(8).webp"],
+["https://elderbruno84.github.io/gamesc/images/sc(9).webp", "https://elderbruno84.github.io/gamesc/images/sc(10).webp", "https://elderbruno84.github.io/gamesc/images/sc(11).webp", "https://elderbruno84.github.io/gamesc/images/sc(12).webp"],
+["https://elderbruno84.github.io/gamesc/images/sc(13).webp", "https://elderbruno84.github.io/gamesc/images/sc(14).webp", "https://elderbruno84.github.io/gamesc/images/sc(15).webp", "https://elderbruno84.github.io/gamesc/images/sc(16).webp"]
 ];
 
 var nivelActual = 0;
