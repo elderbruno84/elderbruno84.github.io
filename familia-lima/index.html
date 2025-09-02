@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Jogo da memória - Família</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:400,600"
+      rel="stylesheet"
+    />
+    <link href="https://elderbruno84.github.io/familia-lima/css/site.css" rel="stylesheet" />
+    <link href="https://elderbruno84.github.io/familia-lima/css/estilos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="bienvenida" class="bienvenida">
+      <!--<h1>👋 Olá! 👋</h1>-->
+      <h1>👋<img src="https://elderbruno84.github.io/familia-lima/images/logo.webp" class="logo" alt="logo">👋</h1>      
+      <div class="bienvenida-botones">
+        <button id="juego-normal">Quero jogar!</button>
+        <button id="juego-relax">Modo fácil</button>
+      </div>
+    </div>
+    <header class="cabecera">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimentos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="cronometro" class="contador-item">
+          <h4 class="cabecera-titulo">Tempo</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="cabecera-titulo">Nível</h4>
+        <div class="cabecera-num"><span id="nivel">01</span></div>
+      </div>
+      <button id="control-nivel" class="control-nivel">…</button>
+    </header>
+    <main>
+      <div id="mesa" class="mesa"></div>
+      <div id="subeNivel" class="sube-nivel">
+        <div class="modal">
+          <h2>Muito bem!</h2>
+          <button id="subir">Nível Seguinte</button>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>Oh não!</h2>
+          <p>Você ficou sem movimentos! 😭</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="timeOver" class="game-over">
+        <div class="modal">
+          <h2>Oh não!</h2>
+          <p>Tempo esgotado! 😭</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>Parabéns!</h2>
+          <p>Você superou todos os níveis! 🏆</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+    </main>
+    <div class="selecciona-nivel">
+      <button id="cierra-niveles" class="cierra-niveles">&times;</button>
+      <ul></ul>
+    </div>
+
+    <audio
+      src="https://elderbruno84.github.io/familia-lima/sonidos/acierto.mp3"
+      class="sonido"
+      id="sonido-acierto"
+      preload="auto"
+    ></audio>
+    <audio
+      src="https://elderbruno84.github.io/familia-lima/sonidos/error.mp3"
+      class="sonido"
+      id="sonido-error"
+      preload="auto"
+    ></audio>
+    <audio
+      src="https://elderbruno84.github.io/familia-lima/sonidos/carta.mp3"
+      class="sonido"
+      id="sonido-carta"
+      preload="auto"
+    ></audio>
+
+    <script src="https://elderbruno84.github.io/familia-lima/js/variables-globales.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/descubrir-comparar.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/baraja-reparte.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/acierto-error.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/contador.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/cronometro.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/finalizar.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/cambia-nivel.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/game-over.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/menu-niveles.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/iniciar.js"></script>
+    <script src="https://elderbruno84.github.io/familia-lima/js/comienza-juego.js"></script>
+  </body>
+</html>
