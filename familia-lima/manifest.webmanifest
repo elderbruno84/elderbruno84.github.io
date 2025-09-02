@@ -1,0 +1,18 @@
+{
+  "name": "Jogo da memória - Família",
+  "short_name": "Família",
+  "description": "Versão PWA instalável do jogo da memória da família.",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#1e2cf3",
+  "icons": [
+    {
+      "src": "./images/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
